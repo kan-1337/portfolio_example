@@ -5,12 +5,11 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AboutComponent } from './components/about/about.component';
 import { CommonModule } from '@angular/common';
-import { BannerComponent } from './components/banner/banner.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, FlexLayoutModule, HomeComponent, ProjectsComponent, ContactComponent, AboutComponent, BannerComponent],
+  imports: [CommonModule, FlexLayoutModule, HomeComponent, ProjectsComponent, ContactComponent, AboutComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
