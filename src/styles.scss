@@ -1,4 +1,63 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
 
-html, body { height: 100%; }
+html {
+  color-scheme: light dark;
+  @include mat.theme((
+    color: mat.$violet-palette,
+    typography: Roboto,
+    density: 0
+  ));
+}
+
+html.light-mode {
+  --home-bg: #f0f0f0;        
+  --projects-bg: #e8e8e8;   
+  --contact-bg: #f0f0f0;     
+  --about-bg: #e8e8e8;       
+}
+
+// Define custom background variables for dark mode
+html.dark-mode {
+  --home-bg: #313131;     
+  --projects-bg: #2a2a2a;
+  --contact-bg: #313131;      
+  --about-bg: #2a2a2a;   
+}
+
+.accent {
+  @include mat.theme(
+    (
+      color: mat.$red-palette,
+    )
+  );
+}
+
+.warn {
+  @include mat.theme(
+    (
+      color: mat.$red-palette,
+    )
+  );
+}
+
+body {
+  background: var(--mat-sys-surface, #fafafa);
+  color: var(--mat-sys-on-surface);
+}
+
+body.light-mode {
+  --home-bg: #fdfdfd;       
+  --projects-bg: #e8e8e8;   
+  --contact-bg: #f0f0f0;     
+  --about-bg: #e8e8e8;    
+}
+
+
+body.dark-mode {
+  --home-bg: #313131;     
+  --projects-bg: #2a2a2a;
+  --contact-bg: #313131;      
+  --about-bg: #2a2a2a;   
+}
+
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
